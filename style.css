@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./Roboto-Regular-webfont.woff);
+}
+:root {
+    --blue: #3a7fc0;
+    --light-blue: #3e8cd4;
+    --red: #d43e3e;
+    --dark-blue: #080829;
+    --green: #10a05d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body {
+    font-family: Roboto, sans-serif;
+}
+
+header, main, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--blue);
+}
+header h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+main {
+    display: flex;
+}
+main aside {
+    background-color: var(--light-blue);
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+aside a {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+aside a:hover {
+    background-color: var(--red);
+}
+article {
+    background-color: #ffefef;
+    width: 80%;
+    padding: 20px;
+}
+article h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--blue);
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#tabelcontent {
+    width: 100%;
+}
+#tableoverflow {
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+}
+table, tr, th, td {
+    border: 1px solid var(--blue);
+    border-collapse: collapse;
+}
+table th {
+    background-color: var(--light-blue);
+    border: 1px solid var(--blue);
+    color: #fff;
+}
+th {
+    padding: 10px;
+}
+td {
+    padding: 7px 10px;
+}
+#tblInput, #tblInput tr, #tblInput td {
+    border: none;
+}
+#tblInput [type=text], #tblInput select {
+    width: 100%;
+}
+footer {
+    background-color: var(--dark-blue);
+    color: #fff;
+    font-size: 15px;
+    padding: 20px;
+    
+}
+form {
+    margin-bottom: 20px;
+}
+[type=text], select {
+    border: 1px solid var(--light-blue);
+    padding: 7px 10px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+.save {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}
+.update {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+}
+.delete {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+@media (max-width: 800px){
+    header, main, main aside, main article, footer {
+        width: 100%;
+    }
+    header, footer {
+        text-align: center;
+    }
+    main {
+        flex-direction: column;
+    }
+    main aside {
+        justify-content: center;
+        flex-direction: row;
+        padding: 10px 20px;
+    }
+    aside a {
+        margin-bottom: 0;
+    }
+}
